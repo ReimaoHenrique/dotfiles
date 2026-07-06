@@ -11,6 +11,10 @@ return {
       })
 
       vim.cmd("colorscheme NeoSolarized")
+
+      vim.api.nvim_set_hl(0, "NotifyBackground", {
+        bg = "#000000",
+      })
     end,
   },
 }
