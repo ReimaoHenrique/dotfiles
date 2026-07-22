@@ -3,10 +3,12 @@
 -- ---------------------
 
 local M = {
-    terminal    = "alacritty",
+    terminal    = "wezterm",
     fileManager = "pcmanfm",
     menu        = "hyprlauncher",
-    browser     = "firefox"
+    browser     = "firefox",
+    editor      = "wezterm start -- nvim",
+    opencode    = "wezterm start -- opencode"
 }
 
 return M
