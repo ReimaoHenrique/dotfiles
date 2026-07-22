@@ -1,12 +1,20 @@
 return {
-  "nvim-neo-tree/neo-tree.nvim",
-  branch = "v3.x",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons",
-    "MunifTanjim/nui.nvim",
-  },
+  "akinsho/bufferline.nvim",
+  version = "*",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
+    require("bufferline").setup({
+      options = {
+        mode = "buffers",
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = "Explorador",
+            text_align = "center",
+            separator = true,
+          },
+        },
+      },
+    })
   end,
 }

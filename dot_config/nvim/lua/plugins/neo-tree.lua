@@ -68,6 +68,8 @@ return {
           toggle = true,
         })
       end, { desc = "Neo-tree Esquerda" })
+      
+      -- Removemos a winbar aqui, pois o bufferline fará esse papel de forma integrada
     end,
   },
 }

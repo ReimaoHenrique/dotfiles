@@ -1,20 +1,26 @@
 return {
+  -- Rose Pine
   {
-    "Tsuzat/NeoSolarized.nvim",
+    "rose-pine/neovim",
+    name = "rose-pine",
     lazy = false,
     priority = 1000,
-
     config = function()
-      require("NeoSolarized").setup({
-        style = "dark",
-        transparent = true,
+      require("rose-pine").setup({
+        variant = "auto",
+        dark_variant = "main",
       })
-
-      vim.cmd("colorscheme NeoSolarized")
-
-      vim.api.nvim_set_hl(0, "NotifyBackground", {
-        bg = "#000000",
-      })
+    end,
+  },
+  -- Everforest
+  {
+    "sainnhe/everforest",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Algumas configurações opcionais antes de carregar
+      vim.g.everforest_background = 'hard'
+      vim.g.everforest_transparent_background = 1
     end,
   },
 }
