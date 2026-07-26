@@ -55,6 +55,11 @@ return {
         },
         follow_current_file = { enabled = true },
         use_libuv_file_watcher = true,
+        window = {
+          mappings = {
+            ["<C-h>"] = "toggle_hidden",
+          },
+        },
       },
     },
     config = function(_, opts)
